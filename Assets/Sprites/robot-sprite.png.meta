@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: 6957a6bfec49503448446f98e065ab78
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4808659732069601984
+    second: robot-sprite_0
+  - first:
+      213: -5834898872838676859
+    second: robot-sprite_1
+  - first:
+      213: 8555097609985261021
+    second: robot-sprite_2
+  - first:
+      213: 6797466938915042685
+    second: robot-sprite_3
+  - first:
+      213: 2017145784328625708
+    second: robot-sprite_4
+  - first:
+      213: -6135507867349666895
+    second: robot-sprite_5
+  - first:
+      213: -2863510361259593742
+    second: robot-sprite_6
+  - first:
+      213: 7497223544840000228
+    second: robot-sprite_7
+  - first:
+      213: -2211071215240186587
+    second: robot-sprite_8
+  - first:
+      213: 2017252613109040220
+    second: robot-sprite_9
+  - first:
+      213: -5091613613590097598
+    second: robot-sprite_10
+  - first:
+      213: -3560030939312991859
+    second: robot-sprite_11
+  - first:
+      213: 2820468944831748561
+    second: robot-sprite_12
+  - first:
+      213: -2773853818643069487
+    second: robot-sprite_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +83,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +117,315 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: robot-sprite_0
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 723
+        width: 95
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2dbb78c8acbb240800000000000000
+      internalID: 4808659732069601984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot-sprite_1
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 721
+        width: 99
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e9f18c366460fa0800000000000000
+      internalID: -5834898872838676859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot-sprite_2
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 719
+        width: 116
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dddf6fd03ffc9b670800000000000000
+      internalID: 8555097609985261021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot-sprite_3
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 722
+        width: 133
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d753e7a9a24755e50800000000000000
+      internalID: 6797466938915042685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot-sprite_4
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 719
+        width: 132
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e951f47675efb10800000000000000
+      internalID: 2017145784328625708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot-sprite_5
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 362
+        width: 141
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3320a1a1c4adaa0800000000000000
+      internalID: -6135507867349666895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot-sprite_6
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 361
+        width: 120
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffa87a7f74c248d0800000000000000
+      internalID: -2863510361259593742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot-sprite_7
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 358
+        width: 101
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e212ef871d7b0860800000000000000
+      internalID: 7497223544840000228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot-sprite_8
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 363
+        width: 95
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525748ac172b051e0800000000000000
+      internalID: -2211071215240186587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot-sprite_9
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 6
+        width: 95
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54c7925098befb10800000000000000
+      internalID: 2017252613109040220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot-sprite_10
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 15
+        width: 95
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2415b6c1564f659b0800000000000000
+      internalID: -5091613613590097598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot-sprite_11
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 39
+        width: 95
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8159d8f8ba389ec0800000000000000
+      internalID: -3560030939312991859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot-sprite_12
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 17
+        width: 95
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d997b4df81542720800000000000000
+      internalID: 2820468944831748561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot-sprite_13
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 7
+        width: 95
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d54be006aa4189d0800000000000000
+      internalID: -2773853818643069487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
