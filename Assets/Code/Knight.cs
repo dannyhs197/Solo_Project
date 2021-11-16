@@ -43,7 +43,7 @@ public class Knight : MonoBehaviour
             animator.SetBool("Left", true);
             animator.SetBool("Up", false);
             animator.SetBool("Down", false);
-            animator.SetBool("Right", true);
+            animator.SetBool("Right", false);
             Down = false;
             Up = false;
             Left = true;
