@@ -11,6 +11,8 @@ public class Knight : MonoBehaviour
     public float speed = 2.0f;
     public Animator animator;
     public Camera cam;
+    public GUIStyle myStyle;
+    public GameObject[] gameObjects;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -74,5 +76,31 @@ public class Knight : MonoBehaviour
             Right = false;
             transform.Translate(Vector3.down * Time.deltaTime * speed);
         }
+    }
+
+    void RemovalJewel()
+    {
+        gameObjects = GameObject.FindGameObjectsWithTag("Jewel");
+        for (var i = 0; i < gameObjects.Length; i++)
+        {
+            Destroy(gameObjects[i]);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Jewel")
+        {
+            Controller.score += 50;
+            Destroy(other.gameObject);
+        }
+    }
+
+
+    void OnGUI()
+    {
+        GUI.Box(new Rect(10, 10, 100, 30), "Time: " + Time.time, myStyle);
+        GUI.Box(new Rect(10, 40, 100, 30), "Score: " + Controller.score);
+        GUI.Box(new Rect(10, 70, 100, 30), "Lives: " + Controller.lives);
     }
 }

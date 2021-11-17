@@ -8,5 +8,7 @@ public class Restart : MonoBehaviour
     public void mainMenu()
     {
         SceneManager.LoadScene(0);
+        Controller.score = 0;
+        Controller.lives = 3;
     }
 }
