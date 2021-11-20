@@ -10,5 +10,6 @@ public class Restart : MonoBehaviour
         SceneManager.LoadScene(0);
         Controller.score = 0;
         Controller.lives = 3;
+
     }
 }
