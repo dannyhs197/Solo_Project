@@ -10,10 +10,6 @@ public class LevelController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); ;
-
-
-            //Restart
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex;
         }
     }
 }

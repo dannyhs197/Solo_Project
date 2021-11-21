@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Knight : MonoBehaviour
 {
@@ -87,8 +88,28 @@ public class Knight : MonoBehaviour
         }
     }
 
+    void RemovalCannonBall()
+    {
+        gameObjects = GameObject.FindGameObjectsWithTag("CannonBall");
+        for (var i = 0; i < gameObjects.Length; i++)
+        {
+            Destroy(gameObjects[i]);
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
+        if (other.gameObject.tag == "CannonBall")
+        {
+            Controller.lives -= 1;
+            Destroy(other.gameObject);
+            if (Controller.lives == 0)
+            {
+                RemovalJewel();
+                RemovalCannonBall();
+                SceneManager.LoadScene(0);
+            }
+        }
         if (other.gameObject.tag == "Jewel")
         {
             Controller.score += 50;
