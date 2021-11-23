@@ -14,10 +14,13 @@ public class Knight : MonoBehaviour
     public Camera cam;
     public GUIStyle myStyle;
     public GameObject[] gameObjects;
+    private AudioSource jewel;
+    private AudioSource damage;
     void Start()
     {
         animator = GetComponent<Animator>();
         cam = Camera.main;
+        jewel = GetComponent<AudioSource>();
     }
 
     void Update(){}
@@ -113,6 +116,7 @@ public class Knight : MonoBehaviour
         if (other.gameObject.tag == "Jewel")
         {
             Controller.score += 50;
+            jewel.Play();
             Destroy(other.gameObject);
         }
     }

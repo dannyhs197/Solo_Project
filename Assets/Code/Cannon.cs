@@ -8,9 +8,11 @@ public class Cannon : MonoBehaviour
     public GameObject bullet;
     float timebetween;
     public float starttimebetween;
+    private AudioSource cannon;
     void Start()
     {
         timebetween = starttimebetween;
+        cannon = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -19,6 +21,7 @@ public class Cannon : MonoBehaviour
         {
             Instantiate(bullet, firepoint.position, firepoint.rotation);
             timebetween = starttimebetween;
+            cannon.Play();
         }
         else
         {
