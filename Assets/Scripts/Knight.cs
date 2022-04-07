@@ -5,21 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class Knight : MonoBehaviour
 {
-    public bool Right = false;
-    public bool Left = false;
-    public bool Up = false;
-    public bool Down = false;
-    public float speed = 2.0f;
-    public Animator animator;
-    public Camera cam;
-    public GUIStyle myStyle;
+    private float speed = 2.0f;
+    //Animation
+    private bool Right = false;
+    private bool Left = false;
+    private bool Up = false;
+    private bool Down = false;
+    private Animator animator;
+    //Array for jewels
     public GameObject[] gameObjects;
+    //Audio
     private AudioSource jewel;
     private AudioSource damage;
+
     void Start()
     {
+        //Get Animator
         animator = GetComponent<Animator>();
-        cam = Camera.main;
+        //Get Jewel Audio
         jewel = GetComponent<AudioSource>();
     }
 
@@ -27,12 +30,40 @@ public class Knight : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MoveCharacter();
+        Movement();
+        Animation();
     }
 
-    void MoveCharacter()
+    //Movement
+    private void Movement()
     {
-        if(Input.GetKey(KeyCode.D))
+        //Right
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.position += Vector3.right * speed * Time.deltaTime;
+        }
+        //Left
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.position += Vector3.left * speed * Time.deltaTime;
+        }
+        //Up
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.position += Vector3.up * speed * Time.deltaTime;
+        }
+        //Down
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.position += Vector3.down * speed * Time.deltaTime;
+        }
+    }
+    
+    //Animations
+    private void Animation()
+    {
+        //Right
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             animator.SetBool("Left", false);
             animator.SetBool("Up", false);
@@ -42,9 +73,9 @@ public class Knight : MonoBehaviour
             Up = false;
             Left = false;
             Right = true;
-            transform.Translate(Vector3.right * Time.deltaTime * speed);
         }
-        if(Input.GetKey(KeyCode.A))
+        //Left
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             animator.SetBool("Left", true);
             animator.SetBool("Up", false);
@@ -54,9 +85,9 @@ public class Knight : MonoBehaviour
             Up = false;
             Left = true;
             Right = false;
-            transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
-        if(Input.GetKey(KeyCode.W))
+        //Up
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             animator.SetBool("Left", false);
             animator.SetBool("Up", true);
@@ -66,9 +97,9 @@ public class Knight : MonoBehaviour
             Up = true;
             Left = false;
             Right = false;
-            transform.Translate(Vector3.up * Time.deltaTime * speed);
         }
-        if(Input.GetKey(KeyCode.S))
+        //Down
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             animator.SetBool("Left", false);
             animator.SetBool("Up", false);
@@ -78,11 +109,11 @@ public class Knight : MonoBehaviour
             Up = false;
             Left = false;
             Right = false;
-            transform.Translate(Vector3.down * Time.deltaTime * speed);
         }
     }
 
-    void RemovalJewel()
+    //Destroys Jewel
+    private void RemovalJewel()
     {
         gameObjects = GameObject.FindGameObjectsWithTag("Jewel");
         for (var i = 0; i < gameObjects.Length; i++)
@@ -90,8 +121,8 @@ public class Knight : MonoBehaviour
             Destroy(gameObjects[i]);
         }
     }
-
-    void RemovalCannonBall()
+    //Destroys CannonBall
+    private void RemovalCannonBall()
     {
         gameObjects = GameObject.FindGameObjectsWithTag("CannonBall");
         for (var i = 0; i < gameObjects.Length; i++)
@@ -102,6 +133,7 @@ public class Knight : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        //Hits CannonBall
         if (other.gameObject.tag == "CannonBall")
         {
             Controller.lives -= 1;
@@ -113,19 +145,12 @@ public class Knight : MonoBehaviour
                 SceneManager.LoadScene(0);
             }
         }
+        //Hits Jewel
         if (other.gameObject.tag == "Jewel")
         {
             Controller.score += 50;
             jewel.Play();
             Destroy(other.gameObject);
         }
-    }
-
-
-    void OnGUI()
-    {
-        GUI.Box(new Rect(10, 10, 100, 30), "Time: " + Time.time, myStyle);
-        GUI.Box(new Rect(10, 40, 100, 30), "Score: " + Controller.score);
-        GUI.Box(new Rect(10, 70, 100, 30), "Lives: " + Controller.lives);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameComplete : MonoBehaviour
 {
+    //Moves to main menu
     public void playGame()
     {
         SceneManager.LoadScene(0);
