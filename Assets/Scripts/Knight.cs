@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Knight : MonoBehaviour
 {
-    private float maxSpeed = 2.0f;
-    private float speed = 0.05f;
+    private float speed = 2.0f;
     //Animation
     private bool Right = false;
     private bool Left = false;
@@ -38,46 +37,26 @@ public class Knight : MonoBehaviour
     //Movement
     private void Movement()
     {
-        while (speed <= maxSpeed)
+        //Right
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            //Right
-            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            {
-                transform.position += Vector3.right * (speed += 0.05f) * Time.deltaTime;
-            }
-            if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
-            {
-                speed = 0.05f;
-            }
-            //Left
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            {
-                transform.position += Vector3.left * (speed += 0.05f) * Time.deltaTime;
-            }
-            if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
-            {
-                speed = 0.05f;
-            }
-            //Up
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-            {
-                transform.position += Vector3.up * (speed += 0.05f) * Time.deltaTime;
-            }
-            if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))
-            {
-                speed = 0.05f;
-            }
-            //Down
-            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-            {
-                transform.position += Vector3.down * (speed += 0.05f) * Time.deltaTime;
-            }
-            if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
-            {
-                speed = 0.05f;
-            }
+            transform.position += Vector3.right * speed * Time.deltaTime;
         }
-
+        //Left
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.position += Vector3.left * speed * Time.deltaTime;
+        }
+        //Up
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.position += Vector3.up * speed * Time.deltaTime;
+        }
+        //Down
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.position += Vector3.down * speed * Time.deltaTime;
+        }
     }
     
     //Animations
@@ -157,6 +136,7 @@ public class Knight : MonoBehaviour
         //Hits CannonBall
         if (other.gameObject.tag == "CannonBall")
         {
+            //Access RigidBody and change Linear Drag
             Controller.lives -= 1;
             Destroy(other.gameObject);
             if (Controller.lives == 0)
