@@ -41,9 +41,9 @@ GameObject:
   - component: {fileID: 3615504473345950009}
   - component: {fileID: 3615504473345950008}
   - component: {fileID: 3615504473345950007}
-  - component: {fileID: 3615504473345950010}
   - component: {fileID: 3615504473345950011}
   - component: {fileID: 2180104006971758441}
+  - component: {fileID: 3875213832694153242}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -103,8 +103,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1057356245
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -4439767164039824451, guid: 8b0fb3bcee9c31a41b6524867d05fcec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -136,32 +136,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &3615504473345950010
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3615504473345950006}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0028613806, y: 0.004292041}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.44, y: 0.69}
-    newSize: {x: 0.44, y: 0.69}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.38849616, y: 0.62418944}
-  m_EdgeRadius: 0
 --- !u!114 &3615504473345950011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +150,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firepoint: {fileID: 3615504473073052838}
   bullet: {fileID: 8879459138938843818, guid: 225e6e83f6004dd499ae0a90209dc778, type: 3}
-  starttimebetween: 5
 --- !u!82 &2180104006971758441
 AudioSource:
   m_ObjectHideFlags: 0
@@ -273,3 +246,58 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!60 &3875213832694153242
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615504473345950006}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.44, y: 0.69}
+    newSize: {x: 0.44, y: 0.69}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.13468605, y: 0.22168516}
+      - {x: 0.13286792, y: 0.27948782}
+      - {x: 0.09456385, y: 0.3058054}
+      - {x: -0.034027047, y: 0.31318805}
+      - {x: -0.110939674, y: 0.30238265}
+      - {x: -0.1313847, y: 0.2928087}
+      - {x: -0.14355722, y: 0.24734885}
+      - {x: -0.13508788, y: 0.21857399}
+      - {x: -0.09627769, y: 0.19475025}
+      - {x: -0.09710051, y: 0.07111688}
+      - {x: -0.11647368, y: 0.05387111}
+      - {x: -0.118559726, y: 0.0017051306}
+      - {x: -0.14440417, y: -0.010062494}
+      - {x: -0.15386397, y: -0.045176063}
+      - {x: -0.19117366, y: -0.055846017}
+      - {x: -0.20000677, y: -0.100170165}
+      - {x: -0.19523491, y: -0.20989953}
+      - {x: -0.15516093, y: -0.24115613}
+      - {x: -0.15228194, y: -0.26003355}
+      - {x: -0.12638733, y: -0.27758384}
+      - {x: -0.071670026, y: -0.30961895}
+      - {x: 0.060067415, y: -0.31318778}
+      - {x: 0.14093973, y: -0.28057042}
+      - {x: 0.19546406, y: -0.21470281}
+      - {x: 0.1900725, y: -0.065555565}
+      - {x: 0.15515442, y: -0.018943312}
+      - {x: 0.12867317, y: 0.007822267}
+      - {x: 0.123363934, y: 0.04938911}
+      - {x: 0.10496112, y: 0.06165622}
+      - {x: 0.10107405, y: 0.19325492}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3638845841102338974}
   - component: {fileID: 3638845841102338961}
   - component: {fileID: 3638845841102338960}
-  - component: {fileID: 3638845841102338975}
+  - component: {fileID: 8886738238456678664}
   m_Layer: 0
   m_Name: Jewel
   m_TagString: Jewel
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1057356245
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -7126765485738322318, guid: 6f341e593f10b214598bb7a6b1c619de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -103,8 +103,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &3638845841102338975
-BoxCollider2D:
+--- !u!60 &8886738238456678664
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -126,6 +126,27 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.32}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.031822048, y: 0.14651981}
+      - {x: -0.08297238, y: 0.104592934}
+      - {x: -0.099999994, y: 0.035944566}
+      - {x: -0.10003042, y: -0.037142515}
+      - {x: -0.062068053, y: -0.12034038}
+      - {x: 0.00038814545, y: -0.15823781}
+      - {x: 0.04118924, y: -0.13621083}
+      - {x: 0.06180557, y: -0.12207019}
+      - {x: 0.10176191, y: -0.04453528}
+      - {x: 0.099666834, y: 0.05915034}
+      - {x: 0.08325943, y: 0.11414051}
+      - {x: 0.010702692, y: 0.15823784}
+    - - {x: -0.04, y: -0.01}
+      - {x: -0.03, y: 0}
+      - {x: -0.03, y: 0.07}
+      - {x: -0.01, y: 0.099999994}
+      - {x: 0, y: 0.11}
+      - {x: 0.03, y: 0.089999996}
+      - {x: 0, y: 0.089999996}
+      - {x: -0.03, y: 0.06}
+      - {x: -0.03, y: -0.02}
+      - {x: -0.03, y: -0.01}

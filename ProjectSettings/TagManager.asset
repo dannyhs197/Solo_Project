@@ -43,3 +43,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3820428315
+    locked: 0
+  - name: Walls
+    uniqueID: 529361157
+    locked: 0
+  - name: Collision
+    uniqueID: 3237611051
+    locked: 0
+  - name: Player
+    uniqueID: 4179399961
+    locked: 0
