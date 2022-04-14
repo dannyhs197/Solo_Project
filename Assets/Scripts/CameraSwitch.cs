@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour
 {
+    //Cameras
     public GameObject mainCamera;
     public GameObject mapCamera;
 
     void Start()
     {
+        //Sets main camera as active
         mainCamera.SetActive(true);
         mapCamera.SetActive(false);
     }
@@ -17,6 +19,7 @@ public class CameraSwitch : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            //On trigger switch to secondary camera
             mainCamera.SetActive(false);
             mapCamera.SetActive(true);
         }
@@ -25,6 +28,7 @@ public class CameraSwitch : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            //Exit trigger switch to main camera
             mainCamera.SetActive(true);
             mapCamera.SetActive(false);
         }

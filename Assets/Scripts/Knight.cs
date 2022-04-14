@@ -12,6 +12,8 @@ public class Knight : MonoBehaviour
     private bool Up = false;
     private bool Down = false;
     private Animator animator;
+    //RigidBody
+    public Rigidbody2D p_rb;
     //Array for jewels
     public GameObject[] gameObjects;
     //Audio
@@ -37,6 +39,7 @@ public class Knight : MonoBehaviour
     //Movement
     private void Movement()
     {
+        p_rb.inertia = 5;
         //Right
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
@@ -136,9 +139,10 @@ public class Knight : MonoBehaviour
         //Hits CannonBall
         if (other.gameObject.tag == "CannonBall")
         {
-            //Access RigidBody and change Linear Drag
+            
             Controller.lives -= 1;
             Destroy(other.gameObject);
+            p_rb.drag = 10;
             if (Controller.lives == 0)
             {
                 RemovalJewel();
@@ -146,12 +150,16 @@ public class Knight : MonoBehaviour
                 SceneManager.LoadScene(0);
             }
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         //Hits Jewel
-        if (other.gameObject.tag == "Jewel")
+        if (collision.gameObject.tag == "Jewel")
         {
             Controller.score += 50;
             jewel.Play();
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }
